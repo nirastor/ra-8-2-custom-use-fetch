@@ -1,38 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 1280px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.component {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 6px 6px 6px #ccc;
+  margin-right: 32px;
+}
+.component:last-child {
+  margin-right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.component-url {
+  margin-bottom: 12px;
+  color: gray; 
+}
+
+.component-ok {
+  font-size: 32px;
+  color: green; 
+}
+
+.component-load {
+  animation: blink 1s ease infinite alternate-reverse;
+}
+
+.component-error {
+  color: darkred;
+}
+
+@keyframes blink {
+  from { opacity: 0.2; } 
+  to { opacity: 1;}
 }

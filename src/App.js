@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import BlockComponent from './BlockComponent'
 
 function App() {
+  const PORT = 7777;
+  const theGoodURL = `http://localhost:${PORT}/data`
+  const theBadURL = `http://localhost:${PORT}/error`
+  const theUglyURL = `http://localhost:${PORT}/loading`
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlockComponent url={theGoodURL} title="Хороший" />
+      <BlockComponent url={theBadURL} title="Плохой" />
+      <BlockComponent url={theUglyURL} title="Злой" />
     </div>
   );
 }
